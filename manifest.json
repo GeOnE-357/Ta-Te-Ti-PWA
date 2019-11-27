@@ -1,0 +1,7 @@
+{
+	"name":"TA-TE-TI PWA",
+	"__comentario":"name es el nombre del splash de la app.",
+	"short_name":"Ta-te-ti",
+	"__comentario":"Este es el nombre de abajo del icono.",
+	"start_url":"index.html"
+}
