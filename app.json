@@ -3,5 +3,12 @@
 	"__comentario":"name es el nombre del splash de la app.",
 	"short_name":"Ta-te-ti",
 	"__comentario":"Este es el nombre de abajo del icono.",
-	"start_url":"index.html"
+	"start_url":"index.html",
+	"__comentario":"Define la pagina en donde va a iniciar nuestra app.",
+	"display":"standalone",
+	"__comentario":"Display define como se va a ver nuestra pagina, standalone es el modo sin la barra de navegacion.",
+	"orientation":"portrait-primary",
+	"__comentario":"Define que nuestro sitio se va a abrir en primer lugar en modo retrato.",
+	"theme_color":"rgba(160,247,167,1)",
+	"background_color":"rgba(160,247,167,1)"
 }
