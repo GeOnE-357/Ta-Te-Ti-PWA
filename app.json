@@ -8,14 +8,44 @@
 	"background_color":"rgba(160,247,167,1)",
 	"icons":[
 				{
-					"src":"img/icon-96x96.png",
+					"src":"img/icon32.png",
+					"type":"image/png",
+					"size":"32x32"
+				},
+				{
+					"src":"img/ico48.png",
+					"type":"image/png",
+					"size":"48x48"
+				},
+				{
+					"src":"img/ico64.png",
+					"type":"image/png",
+					"size":"64x64"
+				},
+				{
+					"src":"img/ico96.png",
 					"type":"image/png",
 					"size":"96x96"
 				},
 				{
-					"src":"img/icon-144x144.png",
+					"src":"img/ico128.png",
+					"type":"image/png",
+					"size":"128x128"
+				},
+				{
+					"src":"img/ico144.png",
 					"type":"image/png",
 					"size":"144x144"
+				},
+				{
+					"src":"img/ico256.png",
+					"type":"image/png",
+					"size":"256x257"
+				},
+				{
+					"src":"img/ico512.png",
+					"type":"image/png",
+					"size":"512x512"
 				}
 			]
 }
