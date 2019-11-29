@@ -4,8 +4,8 @@
 	"start_url":"index.html",
 	"display":"standalone",
 	"orientation":"portrait-primary",
-	"theme_color":"rgba(160,247,167,1)",
-	"background_color":"rgba(160,247,167,1)",
+	"theme_color":"#A0F7A7",
+	"background_color":"#A0F7A7",
 	"icons":[
 				{
 					"src":"img/icon32.png",
