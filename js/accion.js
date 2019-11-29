@@ -17,7 +17,7 @@ function ocultar()
 				conte[i].className="";
 			}
 		///modal.className="modal oculto";
-		bonton.setAttribute("onclick","ocultar()")
+		boton.setAttribute("onclick","ocultar()");
 	}
 
 function mostrar()
