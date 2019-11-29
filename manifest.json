@@ -8,7 +8,7 @@
 	"background_color":"#A0F7A7",
 	"icons":[
 				{
-					"src":"img/icon32.png",
+					"src":"img/ico32.png",
 					"type":"image/png",
 					"sizes":"32x32"
 				},
@@ -36,6 +36,11 @@
 					"src":"img/ico144.png",
 					"type":"image/png",
 					"sizes":"144x144"
+				},
+				{
+					"src":"img/ico192.png",
+					"type":"image/png",
+					"sizes":"192x192"
 				},
 				{
 					"src":"img/ico256.png",
