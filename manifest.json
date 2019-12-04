@@ -6,6 +6,7 @@
 	"orientation":"portrait-primary",
 	"theme_color":"#A0F7A7",
 	"background_color":"#A0F7A7",
+	"scope": "/",
 	"icons":[
 				{
 					"src":"img/ico32.png",
@@ -53,4 +54,5 @@
 					"sizes":"512x512"
 				}
 			]
+
 }
