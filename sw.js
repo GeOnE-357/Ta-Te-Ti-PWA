@@ -1,5 +1,5 @@
 const nombreCache="sitio-cache";
-const elementos=["index.html","css/estilo.css","js/accion.js","js/app.js", "manifest.json"];
+const elementos=["index.html","css/estilo.css","js/accion.js","js/app.js", "manifest.json", "Ta-Te-Ti-PWA/"];
 
 //Instalar el service worker.
 self.addEventListener("install", evt => {
