@@ -1,4 +1,4 @@
-const nombreCache="sitio-cache";
+const nombreStatic="sitio-cache";
 const elementos=["/","/index.html","/css/estilo.css","/js/accion.js"];
 
 //Instalar el service worker.
@@ -14,7 +14,7 @@ const elementos=["/","/index.html","/css/estilo.css","/js/accion.js"];
 self.addEventListener('install', evt => {
   //console.log('service worker installed');
   evt.waitUntil(
-    caches.open(nombreCache).then((cache) => {
+    caches.open(nombreStatic).then((cache) => {
       console.log('caching shell assets');
       cache.addAll(elementos);
     })
