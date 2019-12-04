@@ -2,12 +2,9 @@ const nombreCache="sitio-cache";
 const elementos=["/","/index.html","/css/estilo.css","/js/accion.js"];
 
 //Instalar el service worker.
-self.addEventListener("install", evt =>
-{
+self.addEventListener("install", evt => {
 	//console.log("El service worker se instalo.");
-	evt.waitUntil(
-		caches.open(nombreCache).then((cache)=>
-				{
+	evt.waitUntil(caches.open(nombreCache).then((cache) => {
 					console.log("Definimos el cache predeterminado.");
 					cache.addAll(elementos);
 				})
