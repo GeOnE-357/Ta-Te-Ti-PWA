@@ -1,5 +1,5 @@
 const nombreStatic="sitio-cache";
-const elementos=["/","/index.html","/css/estilo.css","/js/accion.js"];
+const elementos=["index.html","css/estilo.css","js/accion.js"];
 
 //Instalar el service worker.
 /*self.addEventListener("install", evt => {
