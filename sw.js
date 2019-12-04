@@ -1,5 +1,5 @@
 const nombreCache="sitio-cache";
-const elementos=["geone-357.github.io","index.html","css/estilo.css","js/accion.js","js/app.js" ];
+const elementos=["index.html","css/estilo.css","js/accion.js","js/app.js"];
 
 //Instalar el service worker.
 self.addEventListener("install", evt => {
