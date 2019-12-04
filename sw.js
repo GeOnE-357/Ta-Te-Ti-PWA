@@ -1,5 +1,5 @@
 const nombreCache="sitio-cache";
-const elementos=["index.html","css/estilo.css","js/accion.js","js/app.js", "manifest.json", "Ta-Te-Ti-PWA/"];
+const elementos=["index.html","css/estilo.css","js/accion.js","js/app.js", "manifest.json"];
 
 //Instalar el service worker.
 self.addEventListener("install", evt => {
@@ -22,9 +22,9 @@ self.addEventListener("activate", evt =>{
 self.addEventListener("fetch", evt =>{
 	console.log("Se atrapo el evento: ",evt);
 	//2°-Atrapamos los pedidos, para que los busque en el cache.
-	evt.respondWith(
+	/*evt.respondWith(
 		caches.match(evt.request).then(cacheRes => {
 			return cacheRes || fetch(evt.request)
 		})
-	);
+	);*/
 });
