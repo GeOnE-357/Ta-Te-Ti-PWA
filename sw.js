@@ -1,5 +1,5 @@
 const nombreCache="sitio-cache";
-const elementos=["https://geone-357.github.io/Ta-Te-Ti-PWA/","https://geone-357.github.io/Ta-Te-Ti-PWA/index.html","css/estilo.css","js/accion.js","js/app.js", "manifest.json"];
+const elementos=["https://geone-357.github.io/Ta-Te-Ti-PWA/","index.html","css/estilo.css","js/accion.js","js/app.js", "manifest.json"];
 
 //Instalar el service worker.
 self.addEventListener("install", evt => {
