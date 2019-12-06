@@ -1,4 +1,4 @@
-const nombreCache="sitio-cache-v1";
+const nombreCache="sitio-cache-v2";
 const elementos=["https://geone-357.github.io/Ta-Te-Ti-PWA/","index.html","css/estilo.css","js/accion.js","js/app.js", "manifest.json"];
 
 //Instalar el service worker.
@@ -17,7 +17,7 @@ self.addEventListener("install", evt => {
 self.addEventListener("activate", evt =>{
 		console.log("El service worker se activo.");
 		//3°-Chequearemos la version de cache, borraremos la version obsoleta.
-		evt.waitUntil(
+		/*evt.waitUntil(
 			caches.keys().then(keys => {
 				//console.log(keys);
 				return Promise.all(keys
@@ -25,7 +25,7 @@ self.addEventListener("activate", evt =>{
 					.map(key => caches.delete(key))
 				)
 			})
-		);
+		);*/
 	});
 
 //Eventos Fetch (fetch request o pedido de busqueda).
