@@ -20,10 +20,10 @@ self.addEventListener("activate", evt =>{
 		evt.waitUntil(
 			caches.keys().then(keys => {
 				console.log(keys);
-				//return Promise.all(keys
-				//	.filter(key => key !== nombreCache)
-				//	.map(key => caches.delete(key))
-				//)
+				return Promise.all(keys
+					.filter(key => key !== nombreCache)
+					.map(key => caches.delete(key))
+				)
 			})
 		);
 	});
