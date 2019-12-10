@@ -1,5 +1,6 @@
 const nombreCache="sitio-cache-v2";
-const elementos=["https://geone-357.github.io/Ta-Te-Ti-PWA/","index.html","css/estilo.css","js/accion.js","js/app.js", "manifest.json"];
+const dinamicoCache="sitio-dinamico-v1";
+const elementos=["https://geone-357.github.io/Ta-Te-Ti-PWA/","index.html","css/estilo.css","js/accion.js","js/app.js", "manifest.json", "fallback.html"];
 
 //Instalar el service worker.
 self.addEventListener("install", evt => {
@@ -21,7 +22,7 @@ self.addEventListener("activate", evt =>{
 			caches.keys().then(keys => {
 				console.log(keys);
 				return Promise.all(keys
-					.filter(key => key !== nombreCache)
+					.filter(key => key !== nombreCache && key !== dinamicoCache)
 					.map(key => caches.delete(key))
 				)
 			})
@@ -34,7 +35,12 @@ self.addEventListener("fetch", evt =>{
 	//2°-Atrapamos los pedidos, para que los busque en el cache.
 	evt.respondWith(
 		caches.match(evt.request).then(cacheRes => {
-			return cacheRes || fetch(evt.request)
-		})
+			return cacheRes || fetch(evt.request).then(fetchRes =>{
+				return caches.open(dinamicoCache).then(cache => {
+					cache.put(evt.request.url, fetchRes.clone());
+					return fetchRes;
+				})
+			})
+		}).catch(() => caches.match("fallback.html"))
 	);
 });
