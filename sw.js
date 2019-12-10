@@ -4,7 +4,7 @@ const elementos=["https://geone-357.github.io/Ta-Te-Ti-PWA/","index.html","css/e
 
 //Funcion para limitar el cache
 const limiteCache = (nombre, tamaño)=> {
-	caches.open(name).then(cache => {
+	caches.open(nombre).then(cache => {
 		cache.keys().then(keys =>{
 			if(keys.length > tamaño){
 				cache.delete(keys[0]).then(limiteCache(nombre, tamaño));
