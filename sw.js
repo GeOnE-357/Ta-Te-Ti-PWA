@@ -2,6 +2,17 @@ const nombreCache="sitio-cache-v2";
 const dinamicoCache="sitio-dinamico-v1";
 const elementos=["https://geone-357.github.io/Ta-Te-Ti-PWA/","index.html","css/estilo.css","js/accion.js","js/app.js", "manifest.json", "fallback.html"];
 
+//Funcion para limitar el cache
+const limiteCache = (nombre, tamaño)=> {
+	caches.open(name).then(cache => {
+		cache.keys().then(keys =>{
+			if(keys.length > tamaño){
+				cache.delete(keys[0]).then(limiteCache(nombre, tamaño));
+			}
+		})
+	})
+};
+
 //Instalar el service worker.
 self.addEventListener("install", evt => {
 	console.log("El service worker se instalo.");
@@ -38,9 +49,14 @@ self.addEventListener("fetch", evt =>{
 			return cacheRes || fetch(evt.request).then(fetchRes =>{
 				return caches.open(dinamicoCache).then(cache => {
 					cache.put(evt.request.url, fetchRes.clone());
+					limiteCache(dinamicoCache, 5);
 					return fetchRes;
 				})
 			})
-		}).catch(() => caches.match("fallback.html"))
+		}).catch(() => {
+			if(evt.request.url.indexOf(".html") > -1){
+				return caches.match("fallback.html");	
+			}	
+		})
 	);
 });
