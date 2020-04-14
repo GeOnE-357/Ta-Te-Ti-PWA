@@ -2,6 +2,8 @@ var boton=document.getElementsByTagName("button")[0];
 boton.onclick=ocultar;
 var turno=true;
 var conte=document.getElementsByTagName("div");
+var fle1=document.getElementsByClassName("fle1")[0];
+var fle2=document.getElementsByClassName("fle2")[0];
 var puntoX=0;
 var puntoO=0;
 
@@ -25,17 +27,6 @@ function mostrar()
 		var modal=document.getElementsByClassName("modal")[0];
 		modal.className="modal";
 	}
-/*
-conte[0].setAttribute("onclick","escribir(0)");
-conte[1].setAttribute("onclick","escribir(1)");
-conte[2].setAttribute("onclick","escribir(2)");
-conte[3].setAttribute("onclick","escribir(3)");
-conte[4].setAttribute("onclick","escribir(4)");
-conte[5].setAttribute("onclick","escribir(5)");
-conte[6].setAttribute("onclick","escribir(6)");
-conte[7].setAttribute("onclick","escribir(7)");
-conte[8].setAttribute("onclick","escribir(8)");*/
-///conte[0].onclick=function(){escribir(0);};
 
 function escribir(num)
 	{
@@ -45,12 +36,16 @@ function escribir(num)
 				h2.innerHTML="X";
 				h2.className="X";
 				turno=false;
+				fle2.style.visibility="visible";
+				fle1.style.visibility="hidden";
 			}
 		else
 			{
 				h2.innerHTML="O";
 				h2.className="O";
 				turno=true;
+				fle1.style.visibility="visible";
+				fle2.style.visibility="hidden";
 			}
 			
 		conte[num].appendChild(h2);

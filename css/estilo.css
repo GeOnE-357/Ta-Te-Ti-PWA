@@ -3,39 +3,40 @@
 		margin: 0;
 		padding: 0;
 		transition: 1s;
+		transition: 0s visibility;
 	}
 
 body
 	{
-		background-color: rgba(160,247,167,1);
+		background-color: rgba(240, 150, 14,1);
 		height: 100vh;
 		display: grid;
-		grid-template-rows: 90px 1fr;
-	}
-
-div
-	{
-		background-color: rgba(255,255,255,0.5);
-		border-radius: 25px;
-		display: grid;
-		justify-items:center;
-		align-items: center;
+		grid-template-rows: 1fr 4fr;
 	}
 
 div:hover
 	{
-		background-color: rgba(0,0,0,0.2);	
+		background-color: rgba(255,255,255,0.3);	
 	}
 
 header
 	{
-		background-color: rgba(0,0,0,0.1);
+		width: 310px;
+		background-color: rgba(255,255,255,0.3);
+		border-radius: 25px;
+		padding:20px 0 20px 0;
+		align-self: center;
+		justify-self:center;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		align-items: center;
 		justify-items:center;
-		border-radius: 25px;
-		margin: 0 32px 0 32px;
+	}
+
+header > article
+	{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 	}
 
 section
@@ -49,6 +50,16 @@ section
 		margin: auto;
 	}
 
+section > div
+	{
+		background-color: rgba(255,255,255,0.4);
+		border-radius: 25px;
+		display: grid;
+		justify-items:center;
+		align-items: center;
+	}
+
+
 h2
 	{
 		font-family: Arial;
@@ -60,14 +71,19 @@ h2
  		font-family: Arial;
  	}
 
-.X
+.X, .fle1
 	{
 		color: red;
 	}
 
-.O
+.O, .fle2
 	{
 		color: blue;
+	}
+
+.fle2
+	{
+		visibility: hidden;
 	}
 
 .modal
@@ -127,7 +143,7 @@ h2
 
 .elegido
 	{
-		background-color: rgba(0,0,0,0.2);
+		background-color: rgba(255,255,255,0.1);
 	}
 
 .error

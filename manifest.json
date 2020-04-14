@@ -1,11 +1,11 @@
 {
-	"name":"TA-TE-TI PWA",
+	"name":"Ta-Te-Ti",
 	"short_name":"Ta-te-ti",
 	"start_url":"index.html",
 	"display":"standalone",
 	"orientation":"portrait-primary",
-	"theme_color":"#A0F7A7",
-	"background_color":"#A0F7A7",
+	"theme_color":"#f0a31f",
+	"background_color":"#f0a31f",
 	"scope": "/",
 	"icons":[
 				{
