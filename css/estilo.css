@@ -2,8 +2,6 @@
 	{
 		margin: 0;
 		padding: 0;
-		transition: 1s;
-		transition: 0s visibility;
 	}
 
 body
@@ -84,6 +82,7 @@ h2
 .fle2
 	{
 		visibility: hidden;
+		transition: 0s visibility;
 	}
 
 .modal
@@ -94,6 +93,7 @@ h2
 		width: 100vw;
 		background-color: rgba(0,0,0,0.5);
 		overflow: hidden;
+		transition: 1s;
 	}	
 
 .modal > section
@@ -138,6 +138,7 @@ h2
 .oculto
 	{
 		width: 0;
+		transition: 1s;
 	}
 
 
